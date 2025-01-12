@@ -39,6 +39,10 @@ def main():
         # ============== Input/update ==================
         for obj in updatable:
             obj.update(dt)
+            for aster in asteroids:
+                if(aster.collision(player)):
+                    print("Game over!")
+                    exit()
 
         # =================== Render ============
         screen.fill(0)
