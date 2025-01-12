@@ -46,7 +46,7 @@ def main():
                 for shot in shots:
                     if(aster.collision(shot)):
                         shot.kill()
-                        aster.kill()
+                        aster.split()
                 if(aster.collision(player)):
                     print("Game over!")
                     exit()
